@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+#from our hello_world app, import the views module, with the alias index_views
 from hello_world import views as index_views
+from about import views as about_views
 
 urlpatterns = [
-    path('', index_views.index, name='index'),
+    path('', index_views.index, name='index'),      #call index method from our hello_world/views.py file
+    path('about/', about_views.about, name='about'), #call about method from our about/views.py file
     path('admin/', admin.site.urls),
 ]
