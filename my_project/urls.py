@@ -22,6 +22,6 @@ from about import views as about_views
 
 urlpatterns = [
     path('', index_views.index, name='index'),      #call index method from our hello_world/views.py file
-    path('about/', about_views.about, name='about'), #call about method from our about/views.py file
+    path('about/', about_views.about_me, name='about'), #call about method from our about/views.py file
     path('admin/', admin.site.urls),
 ]
